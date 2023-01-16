@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script>
+	window.slide = new SlideNav();
+	</script>
+</head>
+
+<body>
+	<div class="nav">
+		<nav> <a href="#section0" class="active">Home</a> <a href="#section1">Answer 1</a> <a href="#section2">Answer 2</a> <a href="#section3">Answer 3</a> <a href="#section4">Answer 4</a> <a href="#section5">Answer 5</a> <a href="#section6">Answer 6</a> </nav>
+	</div>
+	<div id="section0" class="section">
+		<div class="text-wr">
+			<h1 class="title">
+                <div class="title-top">Information Retrieval Assignment 3</div>
+                <div class="title-tx">Created by: Bar, Ohad, Aviv</div>
+				<div class="title-tx" style="display: inline-block;"><span class="scroll-btn"><span class="mouse"><span></span></span></span></div>
+            </h1> </div>
+	</div>
+	<div id="section1" class="section">
+		<div class="text-wr">
+			<h1 class="title">Question 1 - GIT</h1>
+			<h2 class="title">Link to GitHub:</h2>
+			<article><a href="https://github.com/barBraude/Information-Retrieval">https://github.com/barBraude/Information-Retrieval</a></article>
+		</div>
+	</div>
+	<div id="section2" class="section">
+		<div class="text-p"> <img src="https://pnggrid.com/wp-content/uploads/2021/07/Google-Map-Logo-Transparent.png" /> </div>
+		<div class="text-wr">
+			<h1 class="title">Question 2 - Intresting Technlogies</h1>
+			<article> השתמשנו בפרויקט ב-Google Places API – פלטפורמה שמאפשרת גישה לנתונים של google maps והוצאת המידע הרלוונטי על חיפוש מסעדות / מסעדה ספציפית ועוד. ל-API יש כמה מגבלות:
+				<br/> הראשונה שהיא לא מאפשרת הוצאה של כל המידע שנרצה לדעת, למשל אין גישה ליותר מ5 ביקורות על מקום מסוים,
+				<br/> שנית ה-API מאפשר החזרה של עד 60 נתונים כשמבצעים חיפוש דרך קריאת http כך שתמיד לא נקבל את כל מידע שאנו מחפשים </article>
+		</div>
+	</div>
+	<div id="section3" class="section">
+		<div class="text-wr">
+			<h1 class="title">Question 3 - Queries</h1>
+			<article>
+				<p>כל השאילתות רצו בזמן ממוצע של 30.5 שניות, לדוגמה ביצענו הרצת חיפוש של "מסעדות בחיפה", זמן השאילתות תלוי בכמות השאילתות וההשוואות שאנו מבצעים שמשפיעים על הזמן:</p>
+				<p>
+					<ul>
+						<li>מבצעים חיפוש "מסעדות בחיפה" השאילתה תחזיר 20 תוצאות ראשונות.</li>
+						<li>כדי להגיע ליותר תוצאות נצטרך להריץ מספר פעמים עם token שונה בכל פעם – במקרה שלנו קיבלנו בסך הכל 59 תוצאות כלומר הרצנו 3 פעמים את השאילתה "מסעדות בחיפה" עם token שונה בכל פעם.</li>
+						<li>כדי לבדוק פרטים נוספים על השאילתה – כמו מספר ביקורות, מיקום, URL לאתר וכו'. נדרשנו לבצע שאילתה אחרת שמחזירה את פרטי המסעדה לפי ה id שהוחזר מהשאילתות הקודמות. לכן ביצענו עוד 59 שאילתות עם id של כל מסעדה שהוחזרה.</li>
+						<li>כדי להחזיר את בקשת המשתמש למשל לפי rating (בין 2.5 - 5) אנו מבצעים בדיקות על כל מסעדה שהוחזרה שעומדת בתנאים שהמשתמש ביקש.</li>
+						<li>כלומר בסך הכל ביצענו 3 שאילתות של חיפוש משתמש * 59 שאילתות של חיפוש מסעדה לפי id.</li>
+					</ul> ניתן לשפר את הזמנים ע"י שאילתה יותר ספציפית "מסעדות איטלקיות בחיפה". בנוסף ניתן להשתמש ביותר פרמטרים בשאילתה וכך שהתשובה תוחזר יותר מהר, למשל כמו לתת מיקום של המשתמש ואז לחפש "מסעדות בחיפה" ואולי נקבל תשובה יותר מהירה. </p>
+			</article>
+		</div>
+	</div>
+	<div id="section4" class="section">
+		<div class="text-wr">
+			<h1 class="title">Question 4 - Hub & Authority grade</h1>
+			<article dir="rtl">ד.	מכיוון שבפרויקט שלנו אין קישורים בין הדפים (אישרת שנעזר ב-Facebook, Instagram ו-Tabit לצורך כך), נחפש "מסעדות איטלקיות בחיפה" ונבחר 3 מסעדות:
+				<ul>
+					<li>Vivno</li>
+					<li>Eataliano dalla costa </li>
+					<li>Raffaello</li>
+				</ul>
+			</article>
+			<article>
+				<table>
+					<tr>
+						<td>
+							<table dir="ltr" class="styled-table">
+								<tr>
+									<th></th>
+									<th>A</th>
+									<th>B</th>
+									<th>C</th>
+									<th>Facebook</th>
+									<th>Instagram</th>
+									<th>Tabit</th>
+								</tr>
+								<tr>
+									<td>A</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>1</td>
+									<td>1</td>
+									<td>0</td>
+								</tr>
+								<td>B</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+					</tr>
+					<tr>
+						<td>C</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>Tabit</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<td>Instagram</td>
+					<td>1</td>
+					<td>0</td>
+					<td>1</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					</tr>
+					<tr>
+						<td>Facebook</td>
+						<td>0</td>
+						<td>0</td>
+						<td>1</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					</table>
+					</td>
+					<td>
+						<table dir="ltr" class="styled-table">
+							<tr>
+								<th></th>
+								<th>Hub</th>
+								<th>Authority</th>
+							</tr>
+							<tr>
+								<td>A</td>
+								<td>6</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>B</td>
+								<td>8</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>C</td>
+								<td>8</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Tabit</td>
+								<td>0</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>Instagram</td>
+								<td>3</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>Facebook</td>
+								<td>2</td>
+								<td>2</td>
+							</tr>
+						</table>
+					</td>
+					</tr>
+				</table>
+			</article>
+			<article>
+				<table align="center">
+					<tr>
+						<td><img height="275" widht="275" src="../blob/main/4.1.png" /></td>
+						<td><img height="275" widht="275" src="../blob/main/4.2.png" /></td>
+					</tr>
+				</table>
+			</article>
+		</div>
+	</div>
+	<div id="section5" class="section">
+		<div class="text-wr">
+			<h1 class="title">Question 5 - Page Rank</h1>
+			<article><img height="275" widht="275" src="/blob/main/4.3.jpeg" /></article>
+			<article>
+				Page 0: Tabit
+				Page 1: A
+				Page 2: Facebook
+				Page 3: C
+				Page 4: Instagram
+				Page 5: B
+				<br/>
+				Ranks
+				B: 1
+				A: 2
+				Facebook: 3
+				Instagram: 4
+				Tabit: 4
+				C: 5
+				</article>
+			<article>ניתן לראות על פי הדירוג, שדף C המייצג את מסעדת רפאלו הוא הדף בעל הדירוג הגבוה ביותר על פי האלגוריתם של PageRank.</article>
+		</div>
+	</div>
+	<div id="section6" class="section">
+		<div class="text-wr">
+			<h1 class="title">Question 6 - Relevance Feedback</h1>
+			<article><img height="275" widht="275" src="../blob/main/4.4.png" /></article>
+		</div>
+	</div>
+</body>
+</html>
